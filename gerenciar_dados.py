@@ -1,5 +1,3 @@
-
-
 def importar_dados():
     pass
 

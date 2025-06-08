@@ -1,5 +1,7 @@
-def exibir_menu():
-    pass
+from menus import *
 
-def executar_opcao():
-    pass
+
+
+while True:
+    menu_principal()
+
