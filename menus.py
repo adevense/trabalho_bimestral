@@ -32,3 +32,21 @@ def menu_eventos():
     print("6.")
     print("7.")
     print("8. Voltar ao menu principal")
+    opcao = input("Escolha uma opção: ")
+    if opcao == '1':
+        pass
+    elif opcao == '2':
+        pass
+    elif opcao == '3':
+        pass
+    elif opcao == '4':
+        pass
+    elif opcao == '5':
+        pass
+    elif opcao == '6':
+        pass
+    elif opcao == '7':
+        pass
+    elif opcao == '8':
+        menu_principal()
+    
