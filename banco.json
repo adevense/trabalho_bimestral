@@ -1,23 +1,31 @@
 {
-    "eventos":[
+    "eventos": [
         {
-            "nome":"teste de nome",
-            "data":"2023-10-01",
-            "tema":"teste de tema",
-            "participantes":["João", "Maria", "Pedro"]
-            
+            "nome": "teste de nome",
+            "data": "2023-10-01",
+            "tema": "teste de tema",
+            "participantes": [
+                "João",
+                "Maria",
+                "Pedro"
+            ]
         }
-    
     ],
-    
-
-    "participantes":[
+    "participantes": [
         {
-            "cpf":"444.444.444-04",
-            "nome":"João",
-            "email":"joao.teste@gmail.com",
-            "preferencias_tematicas":["tecnologia", "saúde"]
-            
+            "cpf": "444.444.444-04",
+            "nome": "João",
+            "email": "joao.teste@gmail.com",
+            "preferencias_tematicas": [
+                "tecnologia",
+                "saúde"
+            ]
+        },
+        {
+            "cpf": "999.999.999-09",
+            "nome": "João Gustavo",
+            "email": "teste.teste@gmail.com",
+            "preferencias_tematicas": []
         }
-]
+    ]
 }
