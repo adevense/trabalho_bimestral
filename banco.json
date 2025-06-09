@@ -1,0 +1,23 @@
+{
+    "eventos":[
+        {
+            "nome":"teste de nome",
+            "data":"2023-10-01",
+            "tema":"teste de tema",
+            "participantes":["João", "Maria", "Pedro"]
+            
+        }
+    
+    ],
+    
+
+    "participantes":[
+        {
+            "cpf":"444.444.444-04",
+            "nome":"João",
+            "email":"joao.teste@gmail.com",
+            "preferencias_tematicas":["tecnologia", "saúde"]
+            
+        }
+]
+}
