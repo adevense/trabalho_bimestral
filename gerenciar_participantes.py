@@ -126,7 +126,7 @@ def atualizar_email_participante():
     
 
 def buscar_participante_por_cpf():
-    eventos, participantes = importar_dados()
+    participantes = importar_dados()
     
     while True:
         cpf = input("Digite o CPF do participante no formato XXX.XXX.XXX-XX: ").strip()
