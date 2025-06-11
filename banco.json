@@ -15,10 +15,9 @@
         {
             "cpf": "444.444.444-04",
             "nome": "João",
-            "email": "joao.teste@gmail.com",
+            "email": "jhonas@gmail.com",
             "preferencias_tematicas": [
-                "tecnologia",
-                "saúde"
+
             ]
         },
         {
