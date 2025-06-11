@@ -126,11 +126,11 @@ def atualizar_email_participante():
     
 
 def buscar_participante_por_cpf():
-    participantes = importar_dados()
+    eventos,participantes = importar_dados() 
     
     while True:
         cpf = input("Digite o CPF do participante no formato XXX.XXX.XXX-XX: ").strip()
-        if len(cpf) == 14 and cpf[3] == '.' and cpf[7] == '.' and cpf[11] == '-':   
+        if len(cpf) == 14 and cpf[3] == '.' and cpf[7] == '.' and cpf[11] == '-': 
             participante_encontrado = None 
             for p in participantes:
                 if p['cpf'] == cpf: 
@@ -144,6 +144,7 @@ def buscar_participante_por_cpf():
                     print(f"Preferências temáticas: {', '.join(preferencias)}")
                 else:
                     print("Preferências temáticas: Nenhuma informada.")
+                    input("Presione Enter para continuar")
                 return 
             else:
                 print("Participante não encontrado com este CPF.")
@@ -156,7 +157,7 @@ def buscar_participante_por_cpf():
             continuar = input("Deseja tentar novamente? (s/n): ").lower().strip()
             if continuar == 'n' or continuar == 'nao' or continuar == 'não':
                 print("Busca cancelada.")
-                return 
+                return
 
 
 def inscrever_participante_evento():
@@ -168,4 +169,3 @@ def listar_evento_por_participante():
 def buscar_remover_participante_duplicado_evento():
     pass
 
-buscar_participante_por_cpf()
