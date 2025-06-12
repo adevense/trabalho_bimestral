@@ -2,7 +2,7 @@ from gerenciar_participantes import *
 import  os
 import time
 import random
-
+ 
 def limpar_tela():
     if os.name == 'nt': 
         _ = os.system('cls')
@@ -180,9 +180,34 @@ def carregando_vegeta():
             print(conteudo)
         time.sleep(0.3)
         limpar_tela()
+        
+def carregando_vergil():
+    tempo = random.randint(1, 3)
+    for _  in range(tempo):
+        with open('vergil_1.txt', 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+            print(conteudo)
+        time.sleep(0.5)
+        limpar_tela()
+        with open('vergil_2.txt', 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+            print(conteudo)
+        time.sleep(0.5)
+        limpar_tela()
+        with open('vergil_3.txt', 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+            print(conteudo)
+        time.sleep(0.5)
+        limpar_tela()
+
+        with open('vergil_cadeira.txt', 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+            print(conteudo)
+        time.sleep(1)
+        limpar_tela()
 
 def carregando():
-    escolha = random.randint(1, 4)
+    escolha = random.randint(1, 5)
     if escolha == 1:
         carregando_omni()
     elif  escolha  == 2:
@@ -191,3 +216,5 @@ def carregando():
         carregando_molusco()
     elif escolha == 4:
         carregando_vegeta()
+    elif escolha == 5:
+        carregando_vergil()
