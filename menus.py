@@ -155,12 +155,39 @@ def carregando_molusco():
             print(conteudo)
         time.sleep(0.3)
         limpar_tela()
+        
+def carregando_vegeta():
+    tempo = random.randint(1, 3)
+    for _  in range(tempo):
+        with open('vegeta_1.txt', 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+            print(conteudo)
+        time.sleep(0.5)
+        limpar_tela()
+        with open('vegeta_2.txt', 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+            print(conteudo)
+        time.sleep(0.5)
+        limpar_tela()
+        with open('vegeta_3.txt', 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+            print(conteudo)
+        time.sleep(0.5)
+        limpar_tela()
+
+        with open('vegeta_calvo.txt', 'r', encoding='utf-8') as arquivo:
+            conteudo = arquivo.read()
+            print(conteudo)
+        time.sleep(0.3)
+        limpar_tela()
 
 def carregando():
-    escolha = random.randint(1, 3)
+    escolha = random.randint(1, 4)
     if escolha == 1:
         carregando_omni()
     elif  escolha  == 2:
         carregando_rock()
     elif escolha == 3:
         carregando_molusco()
+    elif escolha == 4:
+        carregando_vegeta()
