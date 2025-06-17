@@ -33,6 +33,9 @@ def adicionar_participante():
                 break
         else:
             print("Email inválido. Certifique-se de que o formato está correto e tente novamente.")
+    if nome == '' or cpf == '' or email == '':
+        print("Nome, CPF e/ou email do participante não podem ser vazios. Cadastro cancelado.")
+        return
     novo_participante = {
         "cpf": cpf,
         "nome": nome,
@@ -46,7 +49,7 @@ def adicionar_participante():
 def remover_participante():
     eventos, participantes = importar_dados()
     while True:
-        cpf = input("Digite o CPF do participante a ser removido no formato XXX.XXX.XXX-XX: ").strip().strip()
+        cpf = input("Digite o CPF do participante a ser removido no formato XXX.XXX.XXX-XX: ").strip()
         if len(cpf) == 14 and cpf[3] == '.' and cpf[7] == '.' and cpf[11] == '-':
             break
         else:

@@ -1,14 +1,10 @@
 {
     "eventos": [
         {
-            "nome": "teste de nome",
-            "data": "2023-10-01",
-            "tema": "teste de tema",
-            "participantes": [
-                "João",
-                "Maria",
-                "Pedro"
-            ]
+            "nome": "curso do jhonas",
+            "data": "02/09/2033",
+            "tema": "i.a",
+            "participantes": []
         }
     ],
     "participantes": [
@@ -16,9 +12,7 @@
             "cpf": "444.444.444-04",
             "nome": "João",
             "email": "jhonas@gmail.com",
-            "preferencias_tematicas": [
-
-            ]
+            "preferencias_tematicas": []
         },
         {
             "cpf": "123.123.123-23",
