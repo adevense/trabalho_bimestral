@@ -78,7 +78,7 @@ def atualizar_tema_evento():
     
 
 def listar_eventos():
-    eventos, participantes = importar_dados()
+    eventos = importar_dados()
     if not eventos:
         print("Nenhum evento cadastrado.")
         return
@@ -86,13 +86,20 @@ def listar_eventos():
     for evento in eventos:
         print(f"Nome: {evento['nome']}, Data: {evento['data']}, Tema: {evento['tema']}, Participantes: {len(evento['participantes'])}")
     
-listar_eventos()
 
-def listar_participantes_por_evento():
-    pass
 
 def agrupar_eventos_por_tema():
-    pass
+    eventos = importar_dados()
+    tema_procurado = input("Digite o tema para agrupar os eventos: ").strip()
+    eventos_filtrados = list(filter(lambda evento: evento['tema'].lower() == tema_procurado.lower(), eventos))
+    if eventos_filtrados:
+        print(f"Eventos com o tema '{tema_procurado}':")
+        for evento_formatado in map(lambda evento: f"Nome: {evento['nome']}, Data: {evento['data']}, Participantes: {len(evento['participantes'])}", eventos_filtrados):
+            print(evento_formatado)
+    else:
+        print(f"Nenhum evento encontrado com o tema '{tema_procurado}'.")
+    
+agrupar_eventos_por_tema()
 
 def contar_eventos_por_tema():
     pass
@@ -106,3 +113,5 @@ def buscar_eventos_por_tema():
 def buscar_eventos_por_faixa_data():
     pass
 
+def listar_participantes_por_evento():
+    pass
