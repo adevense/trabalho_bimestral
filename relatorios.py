@@ -1,13 +1,13 @@
 from gerenciar_dados import *
 
 def gerar_participante_mais_ativo():
-    participantes = importar_dados()
+    _, participantes = importar_dados() 
 
     if not participantes:
         print("Não há participantes cadastrados para gerar o participante mais ativo.")
         return
 
-    participantes_com_eventos = list(filter(lambda p: 'eventos_inscritos' in p and p['eventos_inscritos'], participantes))
+    participantes_com_eventos = [p for p in participantes if p.get('eventos_inscritos')]
 
     if not participantes_com_eventos:
         print("Nenhum participante encontrado com inscrições em eventos.")
@@ -19,13 +19,14 @@ def gerar_participante_mais_ativo():
     cpf_participante = participante_mais_ativo.get('cpf', 'CPF Desconhecido')
     num_eventos = len(participante_mais_ativo.get('eventos_inscritos', []))
 
-    print(f"--- Participante Mais Ativo ---")
+    print(f"\n--- Participante Mais Ativo ---") 
     print(f"Nome: {nome_participante}")
     print(f"CPF: {cpf_participante}")
     print(f"Número de Eventos Inscritos: {num_eventos}") 
+    
 
 def gerar_temas_mais_frequentes():
-    eventos = importar_dados()
+    eventos, _ = importar_dados() 
 
     if not eventos:
         print("Não há eventos cadastrados para gerar temas frequentes.")
@@ -34,8 +35,8 @@ def gerar_temas_mais_frequentes():
     contagem_temas = {}
 
     for evento in eventos:
-        if 'tema' in evento:
-            tema = evento['tema'].lower()
+        if 'tema' in evento and evento['tema'].strip(): 
+            tema = evento['tema'].lower().strip() 
             contagem_temas[tema] = contagem_temas.get(tema, 0) + 1
 
     if not contagem_temas:
@@ -50,7 +51,7 @@ def gerar_temas_mais_frequentes():
 
 
 def calcular_taxa_media_participacao_por_tema():
-    eventos = importar_dados()
+    eventos, _ = importar_dados() 
 
     if not eventos:
         print("Não há eventos cadastrados para calcular a taxa de participação.")
@@ -59,8 +60,8 @@ def calcular_taxa_media_participacao_por_tema():
     dados_por_tema = {}
 
     for evento in eventos:
-        if 'tema' in evento and 'participantes' in evento:
-            tema = evento['tema'].lower()
+        if 'tema' in evento and evento['tema'].strip() and 'participantes' in evento: 
+            tema = evento['tema'].lower().strip() 
             num_participantes = len(evento['participantes'])
 
             if tema not in dados_por_tema:
@@ -83,4 +84,3 @@ def calcular_taxa_media_participacao_por_tema():
             print(f"Tema: '{tema.capitalize()}', Média de Participantes: {media_participacao:.2f}")
         else:
             print(f"Tema: '{tema.capitalize()}', Sem eventos válidos para cálculo de média.")
-
