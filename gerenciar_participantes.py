@@ -56,31 +56,36 @@ def adicionar_participante():
 
 def remover_participante():
     eventos, participantes = importar_dados() 
+    
     while True:
-        cpf_remover = input("Digite o CPF do participante a ser removido no formato XXX.XXX.XXX-XX: ").strip()
+        cpf_input = input("Digite o CPF do participante a ser removido (apenas números ou no formato XXX.XXX.XXX-XX): ").strip()
+        
+        if len(cpf_input) == 11 and cpf_input.isdigit():
+            cpf_remover = f"{cpf_input[:3]}.{cpf_input[3:6]}.{cpf_input[6:9]}-{cpf_input[9:]}"
+        else:
+            cpf_remover = cpf_input
+        
         cpf_validador = CPF() 
         if cpf_validador.validate(cpf_remover):
             break
         else:
-            print("CPF inválido. Certifique-se de que o formato está correto (XXX.XXX.XXX-XX) e tente novamente.")
+            print("CPF inválido. Certifique-se de que o formato está correto (XXX.XXX.XXX-XX) ou que possui 11 números.")
             continuar = input("Deseja tentar novamente? (s/n): ").lower().strip()
             if continuar == 'n' or continuar == 'nao' or continuar == 'não':
                 print("Remoção cancelada.")
                 return
             
-    participante_encontrado = False
+    participante_encontrado_obj = None
     novos_participantes = []
-    participante_nome = ""
-
+    
     for participante in participantes:
         if participante['cpf'] == cpf_remover: 
-            participante_encontrado = True
-            participante_nome = participante['nome']
+            participante_encontrado_obj = participante
         else:
             novos_participantes.append(participante)
     
-    if participante_encontrado:
-        
+    if participante_encontrado_obj:
+        participante_nome = participante_encontrado_obj['nome']
         for evento in eventos:
             if 'participantes' in evento and cpf_remover in evento['participantes']:
                 evento['participantes'].remove(cpf_remover)
