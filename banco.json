@@ -4,13 +4,17 @@
             "nome": "curso do jhonas",
             "data": "02/09/2033",
             "tema": "jhonas",
-            "participantes": []
+            "participantes": [
+                "060.898.891-05"
+            ]
         },
         {
             "nome": "curso do sans",
             "data": "02/09/2033",
             "tema": "i.a",
-            "participantes": []
+            "participantes": [
+                "060.898.891-05"
+            ]
         },
         {
             "nome": "curso do jhonas e sans",
@@ -18,7 +22,6 @@
             "tema": "i.a",
             "participantes": []
         }
-
     ],
     "participantes": [
         {
@@ -32,6 +35,16 @@
             "nome": "Sans",
             "email": "sans.sans@gmail.com",
             "preferencias_tematicas": []
+        },
+        {
+            "cpf": "060.898.891-05",
+            "nome": "igor",
+            "email": "sans@gmail.com",
+            "preferencias_tematicas": [],
+            "eventos_inscritos": [
+                "curso do jhonas",
+                "curso do sans"
+            ]
         }
     ]
 }

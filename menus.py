@@ -1,4 +1,6 @@
 from gerenciar_participantes import *
+from gerenciar_eventos import *
+from relatorios import *
 import  os
 import time
 import random
@@ -24,7 +26,7 @@ def menu_principal():
         if opcao == '1':
             menu_visualizar()
         elif opcao == '2':
-            menu_participantes()
+            menu_gerenciar()
         elif opcao == '3':
             menu_relatorios()
         elif opcao == '4':
@@ -35,17 +37,52 @@ def menu_principal():
         else:
             print("Opção inválida. Por favor, escolha uma das opções acima.")
 
-def menu_participantes():
+def menu_gerenciar():
     limpar_tela()
     carregando()
-    print("\n--- Menu de Gerenciamento de Participantes (Em construção) ---")
-    input("Pressione Enter para voltar ao menu principal...") 
+    while True:
+        print("\n--- Menu de Gerenciamento ---")
+        print("1. Adicionar Evento")
+        print("2. Remover Evento")
+        print("3. Atualizar Tema de Evento")
+        print("4. Adicionar Participante")
+        print("5. Remover Participante")
+        print("6. Atualizar email de Participante")
+        print("7. Voltar ao Menu Principal")
+        opcao = input("Escolha uma opção: ").strip()
+        if opcao == '1':
+            adicionar_evento()
+        elif opcao == '2':
+            remover_eventos()
+        elif opcao == '3':
+            atualizar_tema_evento()
+        elif opcao == '4':
+            adicionar_participante()
+        elif opcao == '5':
+            remover_participante()
+        elif opcao == '6':
+            atualizar_email_participante()
+        elif opcao == '7':
+            break
 
 def menu_relatorios():
     limpar_tela()
     carregando()
-    print("\n--- Menu de Relatórios (Em construção) ---")
-    input("Pressione Enter para voltar ao menu principal...") 
+    while True:
+        print("\n--- Menu de Relatórios ---")
+        print("1. Participante Mais Ativo")
+        print("2. Temas Mais Frequentes")
+        print("3. Taxa Média de Participação por Tema")
+        print("4. Voltar ao Menu Principal")
+        opcao = input("Escolha uma opção: ").strip()
+        if opcao == '1':
+            gerar_participante_mais_ativo()
+        elif opcao == '2':
+            gerar_temas_mais_frequentes()
+        elif opcao == '3':
+            calcular_taxa_media_participacao_por_tema()
+        elif opcao == '4':
+            break
 
 def menu_visualizar():
     limpar_tela()
@@ -53,30 +90,36 @@ def menu_visualizar():
         carregando() 
         print("\n--- Menu de Visualização ---")
         print("1. Buscar Participantes por CPF")
-        print("2. (Opção Vazia)") 
-        print("3. (Opção Vazia)")
-        print("4. (Opção Vazia)")
-        print("5. (Opção Vazia)")
-        print("6. (Opção Vazia)")
-        print("7. (Opção Vazia)")
-        print("8. Voltar ao menu principal")
+        print("2. Listar Eventos por Participante")
+        print("3. Listar Participantes por Evento")
+        print("4. Listar Eventos")
+        print("5. Agrupar Eventos por Tema")
+        print("6. Contar Eventos por Tema")
+        print("7. Identificar Eventos com Poucos Participantes")
+        print("8. Buscar Eventos por Tema")
+        print("9. Buscar Eventos por Faixa de Data")
+        print("10. Voltar ao Menu Principal")
         opcao = input("Escolha uma opção: ").strip()
 
         if opcao == '1':
             buscar_participante_por_cpf()
         elif opcao == '2':
-            pass
+            listar_evento_por_participante()
         elif opcao == '3':
-            pass
+            listar_participantes_por_evento()
         elif opcao == '4':
-            pass
+            listar_eventos()
         elif opcao == '5':
-            pass
+            agrupar_eventos_por_tema()
         elif opcao == '6':
-            pass
+            contar_eventos_por_tema()
         elif opcao == '7':
-            pass
+            identificar_eventos_poucos_participantes()
         elif opcao == '8':
+            buscar_eventos_por_tema()
+        elif opcao == '9':
+            buscar_eventos_por_faixa_data()
+        elif opcao == '10':
             break 
         else:
             print("Opção inválida. Por favor, escolha uma das opções acima.")

@@ -1,4 +1,6 @@
 from gerenciar_dados import *
+from validate_docbr import CPF
+from datetime import datetime
 
 def adicionar_participante():
     eventos,participantes = importar_dados()
@@ -129,7 +131,7 @@ def atualizar_email_participante():
     
 
 def buscar_participante_por_cpf():
-    eventos,participantes = importar_dados() 
+    participantes = importar_dados() 
     
     while True:
         cpf = input("Digite o CPF do participante no formato XXX.XXX.XXX-XX: ").strip()
@@ -164,11 +166,89 @@ def buscar_participante_por_cpf():
 
 
 def inscrever_participante_evento():
-    pass
+    eventos, participantes = importar_dados()
+    cpf_validator = CPF()
+
+    print("\n--- Inscrever Participante em Evento ---")
+    nome_evento = input("Digite o nome do evento: ").strip()
+    data_evento = input("Digite a data do evento (DD/MM/AAAA): ").strip()
+    cpf_participante = input("Digite o CPF do participante (apenas números): ").strip()
+
+    if not cpf_validator.validate(cpf_participante):
+        print("CPF inválido. Por favor, digite um CPF válido (apenas números).")
+        return
+    if not verificar_data(data_evento, data_formato="%d/%m/%Y"):
+        print("Data do evento inválida. Formato esperado: DD/MM/AAAA.")
+        return
+
+    evento_encontrado = None
+    for evento in eventos:
+        if evento['nome'].lower() == nome_evento.lower() and evento['data'] == data_evento:
+            evento_encontrado = evento
+            break
+
+    if not evento_encontrado:
+        print(f"Evento '{nome_evento}' na data '{data_evento}' não encontrado.")
+        return
+
+    participante_encontrado = None
+    for participante in participantes:
+        if participante['cpf'] == cpf_participante:
+            participante_encontrado = participante
+            break
+
+    if not participante_encontrado:
+        print(f"Participante com CPF '{cpf_participante}' não encontrado.")
+        return
+
+    if cpf_participante in evento_encontrado.get('participantes', []):
+        print(f"O participante com CPF '{cpf_participante}' já está inscrito no evento '{nome_evento}'.")
+        return
+
+    if 'participantes' not in evento_encontrado:
+        evento_encontrado['participantes'] = []
+    evento_encontrado['participantes'].append(cpf_participante)
+
+    if 'eventos_inscritos' not in participante_encontrado:
+        participante_encontrado['eventos_inscritos'] = []
+    if nome_evento not in participante_encontrado['eventos_inscritos']:
+        participante_encontrado['eventos_inscritos'].append(nome_evento)
+
+    salvar_dados(eventos, participantes)
+    print(f"Participante '{participante_encontrado['nome']}' (CPF: {cpf_participante}) inscrito com sucesso no evento '{nome_evento}'.")
+
 
 def listar_evento_por_participante():
-    pass
+    eventos, participantes = importar_dados()
+    cpf_validator = CPF()
 
-def buscar_remover_participante_duplicado_evento():
-    pass
+    print("\n--- Listar Eventos por Participante ---")
+    cpf_procurado = input("Digite o CPF do participante (apenas números): ").strip()
+
+    if not cpf_validator.validate(cpf_procurado):
+        print("CPF inválido. Por favor, digite um CPF válido (apenas números).")
+        return
+
+    participante_encontrado = None
+    for participante in participantes:
+        if participante['cpf'] == cpf_procurado:
+            participante_encontrado = participante
+            break
+
+    if not participante_encontrado:
+        print(f"Participante com CPF '{cpf_procurado}' não encontrado.")
+        return
+
+    eventos_inscritos = participante_encontrado.get('eventos_inscritos', [])
+
+    if eventos_inscritos:
+        print(f"Eventos em que '{participante_encontrado['nome']}' (CPF: {cpf_procurado}) está inscrito:")
+        for nome_evento_inscrito in eventos_inscritos:
+            evento_detalhes = next((e for e in eventos if e['nome'] == nome_evento_inscrito), None)
+            if evento_detalhes:
+                print(f"- Nome: {evento_detalhes['nome']}, Data: {evento_detalhes['data']}, Tema: {evento_detalhes.get('tema', 'N/A')}")
+            else:
+                print(f"- {nome_evento_inscrito} (Detalhes não encontrados, evento pode ter sido removido)")
+    else:
+        print(f"O participante '{participante_encontrado['nome']}' não está inscrito em nenhum evento.")
 
