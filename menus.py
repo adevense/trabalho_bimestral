@@ -286,14 +286,14 @@ def carregando_vergil():
         limpar_tela()
 
 def carregando():
-    escolha = random.randint(1, 5)
-    if escolha == 1:
-        carregando_omni()
-    elif escolha == 2:
-        carregando_rock()
-    elif escolha == 3:
-        carregando_molusco()
-    elif escolha == 4:
-        carregando_vegeta()
-    elif escolha == 5:
-        carregando_vergil()
+    opcoes = {
+        "1": carregando_omni,
+        "2": carregando_rock,
+        "3": carregando_molusco,
+        "4": carregando_vegeta,
+        "5": carregando_vergil
+    }
+    randola = str(random.randint(1, 5))
+    adasd = opcoes.get(randola)
+    if adasd:
+        adasd()

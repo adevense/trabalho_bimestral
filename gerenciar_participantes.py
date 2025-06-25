@@ -1,6 +1,6 @@
 from gerenciar_dados import *
 from validate_docbr import CPF
-from datetime import datetime
+from datetime import *
 
 def adicionar_participante():
     eventos, participantes = importar_dados() 
