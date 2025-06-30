@@ -52,7 +52,7 @@ def adicionar_participante():
     
     participantes.append(novo_participante)
     salvar_dados(eventos,participantes)
-    print(f"Participante '{nome}' (CPF: {cpf}) adicionado com sucesso!") 
+    print(f"Participante: {nome} (CPF: {cpf}) adicionado com sucesso!") 
 
 def remover_participante():
     eventos, participantes = importar_dados() 
@@ -92,7 +92,7 @@ def remover_participante():
                 print(f"Participante '{participante_nome}' removido do evento '{evento['nome']}'.") 
         
         salvar_dados(eventos, novos_participantes) 
-        print(f"Participante '{participante_nome}' (CPF: {cpf_remover}) removido com sucesso do sistema.")
+        print(f"Participante: {participante_nome} (CPF: {cpf_remover}) removido com sucesso do sistema.")
     else:
         print("Participante não encontrado.")
 
@@ -185,6 +185,26 @@ def buscar_participante_por_cpf():
                 print("Busca cancelada.")
                 return
 
+def gerar_preferencias_tematicas(eventos, participantes):
+    for participante in participantes:
+        participante['preferencias_tematicas'] = []
+        
+        contagem_temas = {} 
+        
+        for evento_nome_inscrito in participante.get('eventos_inscritos', []):
+            for evento in eventos:
+                if evento['nome'] == evento_nome_inscrito:
+                    tema_do_evento = evento['tema']
+                    contagem_temas[tema_do_evento] = contagem_temas.get(tema_do_evento, 0) + 1
+                    break
+        
+        temas_qualificados = []
+        for tema, contagem in contagem_temas.items():
+            if contagem >= 3:
+                temas_qualificados.append(tema)
+        
+        participante['preferencias_tematicas'] = sorted(temas_qualificados)
+
 
 def inscrever_participante_evento():
     eventos, participantes = importar_dados()
@@ -249,9 +269,12 @@ def inscrever_participante_evento():
     
     if nome_evento not in participante_encontrado['eventos_inscritos']:
         participante_encontrado['eventos_inscritos'].append(nome_evento)
-
+    gerar_preferencias_tematicas(eventos, participantes)
     salvar_dados(eventos, participantes)
     print(f"Participante '{participante_encontrado['nome']}' (CPF: {participante_encontrado['cpf']}) inscrito com sucesso no evento '{nome_evento}'.")
+    
+    
+
 
 
 def listar_evento_por_participante():

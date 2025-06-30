@@ -3,11 +3,8 @@
         {
             "nome": "Curso de Python para Iniciantes",
             "data": "10/01/2026",
-            "tema": "programacao",
+            "tema": "programaçao",
             "participantes": [
-                "123.456.789-01",
-                "234.567.890-12",
-                "345.678.901-23",
                 "109.210.311-22"
             ]
         },
@@ -16,9 +13,7 @@
             "data": "20/02/2026",
             "tema": "ciencia de dados",
             "participantes": [
-                "456.789.012-34",
-                "567.890.123-45",
-                "123.456.789-01"
+                "109.210.311-22"
             ]
         },
         {
@@ -26,9 +21,7 @@
             "data": "05/03/2026",
             "tema": "marketing",
             "participantes": [
-                "678.901.234-56",
-                "789.012.345-67",
-                "890.123.456-78"
+                "109.210.311-22"
             ]
         },
         {
@@ -36,10 +29,7 @@
             "data": "15/04/2026",
             "tema": "inteligencia artificial",
             "participantes": [
-                "901.234.567-89",
-                "012.345.678-90",
-                "123.456.789-01",
-                "234.567.890-12"
+
             ]
         },
         {
@@ -47,8 +37,7 @@
             "data": "25/05/2026",
             "tema": "robotica",
             "participantes": [
-                "345.678.901-23",
-                "456.789.012-34"
+
             ]
         },
         {
@@ -56,8 +45,7 @@
             "data": "01/06/2026",
             "tema": "design",
             "participantes": [
-                "567.890.123-45",
-                "678.901.234-56"
+
             ]
         },
         {
@@ -65,8 +53,7 @@
             "data": "10/07/2026",
             "tema": "devops",
             "participantes": [
-                "789.012.345-67",
-                "890.123.456-78"
+
             ]
         },
         {
@@ -74,8 +61,7 @@
             "data": "20/08/2026",
             "tema": "ciberseguranca",
             "participantes": [
-                "901.234.567-89",
-                "012.345.678-90"
+
             ]
         },
         {
@@ -83,9 +69,7 @@
             "data": "01/09/2026",
             "tema": "ciencia de dados",
             "participantes": [
-                "123.456.789-01",
-                "456.789.012-34",
-                "789.012.345-67"
+
             ]
         },
         {
@@ -93,9 +77,7 @@
             "data": "10/10/2026",
             "tema": "gestao",
             "participantes": [
-                "234.567.890-12",
-                "567.890.123-45",
-                "890.123.456-78"
+
             ]
         },
         {
@@ -103,9 +85,7 @@
             "data": "15/11/2026",
             "tema": "programacao",
             "participantes": [
-                "345.678.901-23",
-                "678.901.234-56",
-                "901.234.567-89"
+
             ]
         },
         {
@@ -113,8 +93,7 @@
             "data": "05/12/2026",
             "tema": "tecnologia",
             "participantes": [
-                "012.345.678-90",
-                "123.456.789-01"
+
             ]
         },
         {
@@ -164,211 +143,115 @@
             "data": "17/08/2027",
             "tema": "saude",
             "participantes": []
+        },
+        {
+            "nome": "programação 1",
+            "data": "02/02/2026",
+            "tema": "programação",
+            "participantes": [
+                "109.210.311-22"
+            ]
+        },
+        {
+            "nome": "programação 2",
+            "data": "02/02/2026",
+            "tema": "programação",
+            "participantes": [
+                "109.210.311-22"
+            ]
+        },
+        {
+            "nome": "programação 3",
+            "data": "02/02/2026",
+            "tema": "programação",
+            "participantes": [
+                "109.210.311-22"
+            ]
+        },
+        {
+            "nome": "programação 4",
+            "data": "20/02/2026",
+            "tema": "programação",
+            "participantes": [
+                "109.210.311-22"
+            ]
         }
     ],
     "participantes": [
         {
-            "cpf": "123.456.789-01",
-            "nome": "Ana Silva",
-            "email": "ana.silva@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Curso de Python para Iniciantes",
-                "Workshop de Data Science",
-                "Conferência de Inteligência Artificial",
-                "Big Data e Analytics",
-                "Blockchain para Negócios"
-            ]
-        },
-        {
-            "cpf": "234.567.890-12",
-            "nome": "Bruno Costa",
-            "email": "bruno.c@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Curso de Python para Iniciantes",
-                "Conferência de Inteligência Artificial",
-                "Gestão de Projetos Ágeis"
-            ]
-        },
-        {
-            "cpf": "345.678.901-23",
-            "nome": "Carla Dias",
-            "email": "carla.d@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Curso de Python para Iniciantes",
-                "Introdução à Robótica",
-                "Desenvolvimento Web com React"
-            ]
-        },
-        {
-            "cpf": "456.789.012-34",
-            "nome": "Daniel Elias",
-            "email": "daniel.e@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Workshop de Data Science",
-                "Introdução à Robótica",
-                "Big Data e Analytics"
-            ]
-        },
-        {
-            "cpf": "567.890.123-45",
-            "nome": "Eduarda Froes",
-            "email": "eduarda.f@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Workshop de Data Science",
-                "Design de Experiência do Usuário (UX)",
-                "Gestão de Projetos Ágeis"
-            ]
-        },
-        {
-            "cpf": "678.901.234-56",
-            "nome": "Felipe Guedes",
-            "email": "felipe.g@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Seminário de Marketing Digital",
-                "Design de Experiência do Usuário (UX)",
-                "Desenvolvimento Web com React"
-            ]
-        },
-        {
-            "cpf": "789.012.345-67",
-            "nome": "Giovana Hermes",
-            "email": "giovana.h@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Seminário de Marketing Digital",
-                "DevOps e Automação",
-                "Big Data e Analytics"
-            ]
-        },
-        {
-            "cpf": "890.123.456-78",
-            "nome": "Henrique Ipanema",
-            "email": "henrique.i@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Seminário de Marketing Digital",
-                "DevOps e Automação",
-                "Gestão de Projetos Ágeis"
-            ]
-        },
-        {
-            "cpf": "901.234.567-89",
-            "nome": "Isabela Jardim",
-            "email": "isabela.j@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Conferência de Inteligência Artificial",
-                "Segurança da Informação",
-                "Desenvolvimento Web com React"
-            ]
-        },
-        {
-            "cpf": "012.345.678-90",
-            "nome": "Júlio Klein",
-            "email": "julio.k@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Conferência de Inteligência Artificial",
-                "Segurança da Informação",
-                "Blockchain para Negócios"
-            ]
-        },
-        {
-            "cpf": "100.200.300-40",
-            "nome": "Luiza Mendes",
-            "email": "luiza.m@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Curso de Python para Iniciantes"
-            ]
-        },
-        {
-            "cpf": "101.202.303-44",
-            "nome": "Marcos Nunes",
-            "email": "marcos.n@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Workshop de Data Science"
-            ]
-        },
-        {
-            "cpf": "102.203.304-55",
-            "nome": "Nadia Oliveira",
-            "email": "nadia.o@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Seminário de Marketing Digital"
-            ]
-        },
-        {
-            "cpf": "103.204.305-66",
-            "nome": "Oscar Pereira",
-            "email": "oscar.p@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Conferência de Inteligência Artificial"
-            ]
-        },
-        {
-            "cpf": "104.205.306-77",
-            "nome": "Paula Querino",
-            "email": "paula.q@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Introdução à Robótica"
-            ]
-        },
-        {
-            "cpf": "105.206.307-88",
-            "nome": "Ricardo Souza",
-            "email": "ricardo.s@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Design de Experiência do Usuário (UX)"
-            ]
-        },
-        {
-            "cpf": "106.207.308-99",
-            "nome": "Sofia Teixeira",
-            "email": "sofia.t@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "DevOps e Automação"
-            ]
-        },
-        {
-            "cpf": "107.208.309-00",
-            "nome": "Thiago Uchoa",
-            "email": "thiago.u@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Segurança da Informação"
-            ]
-        },
-        {
-            "cpf": "108.209.310-11",
-            "nome": "Úrsula Vasconcelos",
-            "email": "ursula.v@email.com",
-            "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "Big Data e Analytics"
-            ]
-        },
-        {
             "cpf": "109.210.311-22",
-            "nome": "Victor Ximenes",
-            "email": "victor.games@gmail.com",
-            "preferencias_tematicas": [],
+            "nome": "Victor Andrey",
+            "email": "barman_victor@gmail.com",
+            "preferencias_tematicas": [
+                "programação"
+            ],
             "eventos_inscritos": [
                 "Gestão de Projetos Ágeis",
-                "Curso de Python para Iniciantes"
+                "Curso de Python para Iniciantes",
+                "Workshop de Data Science",
+                "Seminário de Marketing Digital",
+                "programação 1",
+                "programação 2",
+                "programação 4",
+                "programação 3"
             ]
+        },
+        {
+            "cpf": "786.726.287-30",
+            "nome": "Carlos da Silva",
+            "email": "carlinhos.gameplays@gmail.com",
+            "preferencias_tematicas": [],
+            "eventos_inscritos": [
+                "programação 1"
+            ]
+        },
+        {
+            "cpf": "121.899.049-00",
+            "nome": "Roberto da Silva",
+            "email": "robert.silva@gmail.com",
+            "preferencias_tematicas": []
+        },
+        {
+            "cpf": "744.604.125-00",
+            "nome": "Matueus de Oliveira",
+            "email": "matueus.oliveira@gmail.com",
+            "preferencias_tematicas": []
+        },
+        {
+            "cpf": "195.430.320-33",
+            "nome": "Oliver Queen",
+            "email": "queen.oliver@gmail.com",
+            "preferencias_tematicas": []
+        },
+        {
+            "cpf": "125.165.677-31",
+            "nome": "Santos Drumond",
+            "email": "drumond.santos@gmail.com",
+            "preferencias_tematicas": []
+        },
+        {
+            "cpf": "586.701.002-31",
+            "nome": "Marcos Correia da Silva Lima",
+            "email": "marcos.lima@gamil.com",
+            "preferencias_tematicas": []
+        },
+        {
+            "cpf": "259.090.046-54",
+            "nome": "Gustavo Almeida Cruz",
+            "email": "gustavo.cruz@gmail.com",
+            "preferencias_tematicas": []
+        },
+        {
+            "cpf": "945.673.942-24",
+            "nome": "Sora D. Casagrande",
+            "email": "sora.casagrande@gmail.com",
+            "preferencias_tematicas": []
+        },
+        {
+            "cpf": "068.281.107-65",
+            "nome": "Alexandre Souza Lima",
+            "email": "alexandre.lima@gmail.com",
+            "preferencias_tematicas": []
         }
     ]
 }

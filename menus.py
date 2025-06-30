@@ -47,11 +47,11 @@ def menu_principal():
                 limpar_tela()
                 break
             else:
-                acao() # Chama a função mapeada
+                acao()
         else:
             print("Opção inválida. Por favor, escolha uma das opções acima.")
 
-        if opcao != '5': # Para não pedir Enter ao sair
+        if opcao != '5': 
             input("\nPressione Enter para continuar...")
         limpar_tela()
 
@@ -85,15 +85,15 @@ def menu_gerenciar():
         acao = opcoes_menu_gerenciar.get(opcao)
 
         if acao:
-            limpar_tela() # Limpa a tela antes de executar a ação, se for uma ação válida
+            limpar_tela() # Limpa a tela antes de executar a ação
             if opcao == '7':
-                break # Sai do loop se a opção for '7'
+                break 
             else:
                 acao() # Chama a função mapeada
         else:
             print("Opção inválida. Por favor, escolha uma das opções acima.")
 
-        if opcao != '7': # Para não pedir Enter ao voltar ao menu principal
+        if opcao != '7': 
             input("\nPressione Enter para continuar...")
             limpar_tela()
 
@@ -102,7 +102,7 @@ def menu_relatorios():
     limpar_tela()
     carregando()
 
-    # Mapeamento das opções para as funções correspondentes
+    
     opcoes_menu_relatorios = {
         '1': gerar_participante_mais_ativo,
         '2': gerar_temas_mais_frequentes,
@@ -121,21 +121,21 @@ def menu_relatorios():
         acao = opcoes_menu_relatorios.get(opcao)
 
         if acao:
-            limpar_tela() # Limpa a tela antes de executar a ação, se for uma ação válida
+            limpar_tela() 
             if opcao == '4':
-                break # Sai do loop se a opção for '4'
+                break
             else:
-                acao() # Chama a função mapeada
+                acao()
         else:
             print("Opção inválida. Por favor, escolha uma das opções acima.")
 
-        if opcao != '4': # Para não pedir Enter ao voltar ao menu principal
+        if opcao != '4': 
             input("\nPressione Enter para continuar...")
             limpar_tela()
 
 def menu_visualizar():
     limpar_tela()
-    # Mapeamento das opções para as funções correspondentes
+  
     opcoes_menu_visualizar = {
         '1': buscar_participante_por_cpf,
         '2': listar_evento_por_participante,
@@ -146,7 +146,7 @@ def menu_visualizar():
         '7': identificar_eventos_poucos_participantes,
         '8': buscar_eventos_por_tema,
         '9': buscar_eventos_por_faixa_data,
-        '10': lambda: True # Retorna True para sinalizar saída do loop
+        '10': lambda: True 
     }
 
     while True:
@@ -167,19 +167,19 @@ def menu_visualizar():
         acao = opcoes_menu_visualizar.get(opcao)
 
         if acao:
-            limpar_tela() # Limpa a tela antes de executar a ação, se for uma ação válida
+            limpar_tela() 
             if opcao == '10':
-                break # Sai do loop se a opção for '10'
+                break 
             else:
-                acao() # Chama a função mapeada
+                acao() 
         else:
             print("Opção inválida. Por favor, escolha uma das opções acima.")
 
-        if opcao != '10': # Para não pedir Enter ao voltar ao menu principal
+        if opcao != '10': 
             input("\nPressione Enter para continuar...")
             limpar_tela()
 
-# Funções de carregamento (mantidas como estão, pois já usam o padrão de dicionário)
+
 def carregando_omni():
     tempo = random.randint(1, 2)
     for _ in range(tempo):
