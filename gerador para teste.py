@@ -44,12 +44,12 @@ def gerar_cpf_sintaticamente_valido():
     return cpf_formatado
 
 def gerar_nome_completo():
-    nomes = ["João", "Maria", "Pedro", "Ana", "Lucas", "Laura", "Carlos", "Fernanda", "Rafael", "Camila","Marcos","Roberto",
+    nomes = ["João", "Moshi", "Juliano", "Maria", "Pedro", "Ana", "Lucas", "Laura", "Carlos", "Fernanda", "Rafael", "Camila","Marcos","Roberto",
                 "Juliana","Eduardo","Patrícia","Gabriel","Sofia","Ricardo","Isabela","Thiago" ,"Larissa","Felipe","Mariana",
                 "André","Aline","Bruno","Tatiane","Vinícius","Natália","Gustavo","Carolina","Diego","Beatriz","Rodrigo","Juliana",]
 
-    sobrenomes = ["Silva", "Souza", "Oliveira", "Santos", "Pereira", "Lima", "Costa", "Almeida", "Rocha", "Martins",
-                "Gomes", "Ribeiro", "Barbosa", "Fernandes", "Cardoso", "Melo", "Teixeira", "Pinto", "Nogueira", "Cavalcanti", "Araújo",
+    sobrenomes = ["Silva", "Cavassini","Casagrande", "Souza", "Oliveira", "Santos", "Pereira", "Lima", "Costa", "Almeida", "Rocha", "Martins",
+                "Gomes", "Ribeiro", "Barbosa", "Fernandes", "Cardoso", "Melo", "Teixeira", "Jacinto Pinto", "Nogueira", "Cavalcanti", "Araújo",
                 "Dias", "Correia", "Mendes", "Castro", "Farias", "Monteiro", "Lopes", "Vieira", "Ramos", "Barros", "Campos",
                 "Moreira", "Siqueira", "Pimentel", "Tavares", "Borges", "Cunha", "Freitas", "Machado", "Azevedo", "Gonçalves", "Lacerda"]
     nome_completo =  f"{random.choice(nomes)} {random.choice(sobrenomes)}"
@@ -88,15 +88,19 @@ def gerar_evento():
                     "Masterclass", "Webinar", "Talk Show", "Painel de Discussão", "Mesa Redonda", "Rodada de Negócios", "Evento Corporativo",
                     "Evento Acadêmico", "Evento Social", "Evento Cultural", "Evento Esportivo", "Evento de Caridade", "Evento de Lançamento",
                     "Evento de Networking", "Evento de Confraternização", "Evento de Premiação"]
-    data_evento = f"{random.randint(1, 31):02d}/{random.randint(1, 12):02d}/{random.randint(2023, 2025)}"
+    data_evento = f"{random.randint(1, 31):02d}/{random.randint(1, 12):02d}/{random.randint(2025, 2028)}"
+    palestrante = gerar_nome_completo()
     evento = {
         "nome": random.choice(nomes_evento),
         "data": data_evento,  
         "tema": random.choice(temas_evento),
+        "palestrante": palestrante,
     }
+
     print(f"Evento: {evento['nome']}")
     print(f"Data: {evento['data']}")
     print(f"Tema: {evento['tema']}")
+    print(f"Palestrante: {evento['palestrante']}")
     input("Pressione Enter para continuar...")  
 
 while True:

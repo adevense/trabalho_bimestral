@@ -26,11 +26,20 @@ def adicionar_evento():
     if not nome or not tema: 
         print("Nome e tema do evento não podem ser vazios. Cadastro cancelado.")
         return
+    while True:
+        palestrante = input("Digite o nome do palestrante: ").strip()
+        if palestrante is None or palestrante == "":
+            input("Nenhum palestrante informado, tente novamente.")
+        else:
+            break
+    
+    
     
     novo_evento = {
         "nome": nome,
         "data": data,
         "tema": tema,
+        "palestrante": palestrante,
         "participantes": []
     }
     
@@ -96,7 +105,7 @@ def listar_eventos():
         return
     print("\n--- Lista de Eventos ---") 
     for evento in eventos:
-        print(f"Nome: {evento['nome']}, Data: {evento['data']}, Tema: {evento['tema']}, Participantes: {len(evento.get('participantes', []))}") 
+        print(f"Nome: {evento['nome']}, Data: {evento['data']}, Tema: {evento['tema']}, Palestrante: {evento['palestrante']}, Participantes: {len(evento.get('participantes', []))}") 
     
 def agrupar_eventos_por_tema():
     eventos, _ = importar_dados() 

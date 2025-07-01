@@ -1,177 +1,143 @@
 {
     "eventos": [
         {
-            "nome": "Curso de Python para Iniciantes",
-            "data": "10/01/2026",
-            "tema": "programaçao",
-            "participantes": [
-                "109.210.311-22"
-            ]
+            "nome": "História da Programação",
+            "data": "02/02/2025",
+            "tema": "historia",
+            "palestrante": "Jhonas Alberto",
+            "participantes": []
         },
         {
-            "nome": "Workshop de Data Science",
-            "data": "20/02/2026",
-            "tema": "ciencia de dados",
-            "participantes": [
-                "109.210.311-22"
-            ]
-        },
-        {
-            "nome": "Seminário de Marketing Digital",
-            "data": "05/03/2026",
-            "tema": "marketing",
-            "participantes": [
-                "109.210.311-22"
-            ]
-        },
-        {
-            "nome": "Conferência de Inteligência Artificial",
-            "data": "15/04/2026",
+            "nome": "Introdução ao Machine Learning",
+            "data": "15/03/2025",
             "tema": "inteligencia artificial",
-            "participantes": [
-
-            ]
+            "palestrante": "Dra. Elara Vance",
+            "participantes": []
         },
         {
-            "nome": "Introdução à Robótica",
-            "data": "25/05/2026",
-            "tema": "robotica",
-            "participantes": [
-
-            ]
+            "nome": "Fundamentos de Banco de Dados SQL",
+            "data": "20/04/2025",
+            "tema": "banco de dados",
+            "palestrante": "Eng. Rafael Mendes",
+            "participantes": []
         },
         {
-            "nome": "Design de Experiência do Usuário (UX)",
-            "data": "01/06/2026",
-            "tema": "design",
-            "participantes": [
-
-            ]
-        },
-        {
-            "nome": "DevOps e Automação",
-            "data": "10/07/2026",
-            "tema": "devops",
-            "participantes": [
-
-            ]
-        },
-        {
-            "nome": "Segurança da Informação",
-            "data": "20/08/2026",
+            "nome": "Cibersegurança para Leigos",
+            "data": "05/05/2025",
             "tema": "ciberseguranca",
-            "participantes": [
-
-            ]
+            "palestrante": "Clara S. Neves",
+            "participantes": []
         },
         {
-            "nome": "Big Data e Analytics",
-            "data": "01/09/2026",
-            "tema": "ciencia de dados",
-            "participantes": [
-
-            ]
-        },
-        {
-            "nome": "Gestão de Projetos Ágeis",
-            "data": "10/10/2026",
-            "tema": "gestao",
-            "participantes": [
-
-            ]
-        },
-        {
-            "nome": "Desenvolvimento Web com React",
-            "data": "15/11/2026",
+            "nome": "Desenvolvimento Mobile com Flutter",
+            "data": "10/06/2025",
             "tema": "programacao",
-            "participantes": [
-
-            ]
+            "palestrante": "Lucas Faria",
+            "participantes": []
         },
         {
-            "nome": "Blockchain para Negócios",
-            "data": "05/12/2026",
+            "nome": "Marketing Digital na Era do TikTok",
+            "data": "25/07/2025",
+            "tema": "marketing",
+            "palestrante": "Sofia Ribeiro",
+            "participantes": []
+        },
+        {
+            "nome": "Design Thinking na Prática",
+            "data": "08/08/2025",
+            "tema": "design",
+            "palestrante": "Arquiteto Bento C.",
+            "participantes": []
+        },
+        {
+            "nome": "Realidade Virtual e Aumentada: Futuro",
+            "data": "19/09/2025",
             "tema": "tecnologia",
-            "participantes": [
-
-            ]
+            "palestrante": "Dr. Guilherme Ramos",
+            "participantes": []
         },
         {
-            "nome": "Edição de Vídeo Profissional",
-            "data": "08/01/2027",
+            "nome": "Gestão Ágil com Scrum e Kanban",
+            "data": "01/10/2025",
+            "tema": "gestao",
+            "palestrante": "Proj. Lívia Martins",
+            "participantes": []
+        },
+        {
+            "nome": "Introdução à Robótica Educacional",
+            "data": "14/11/2025",
+            "tema": "robotica",
+            "palestrante": "Prof. Carlos Pinho",
+            "participantes": []
+        },
+        {
+            "nome": "Blockchain e Criptomoedas Descomplicadas",
+            "data": "03/12/2025",
+            "tema": "tecnologia",
+            "palestrante": "Mariana Castro",
+            "participantes": []
+        },
+        {
+            "nome": "Edição de Fotos com Adobe Photoshop",
+            "data": "10/01/2026",
             "tema": "multimidia",
+            "palestrante": "Fotógrafa Bianca L.",
             "participantes": []
         },
         {
-            "nome": "Fotografia Digital Avançada",
-            "data": "18/02/2027",
-            "tema": "fotografia",
+            "nome": "O Essencial do Cloud Computing (AWS/Azure)",
+            "data": "22/02/2026",
+            "tema": "infraestrutura",
+            "palestrante": "Daniel Viana",
             "participantes": []
         },
         {
-            "nome": "Escrita Criativa para Roteiros",
-            "data": "28/03/2027",
-            "tema": "literatura",
-            "participantes": []
-        },
-        {
-            "nome": "Culinária Internacional",
-            "data": "07/04/2027",
-            "tema": "gastronomia",
-            "participantes": []
-        },
-        {
-            "nome": "Introdução à Astronomia",
-            "data": "17/05/2027",
-            "tema": "ciencia",
-            "participantes": []
-        },
-        {
-            "nome": "Psicologia Positiva",
-            "data": "27/06/2027",
+            "nome": "Psicologia Cognitiva Aplicada",
+            "data": "07/03/2026",
             "tema": "psicologia",
+            "palestrante": "Dra. Patrícia Gomes",
             "participantes": []
         },
         {
-            "nome": "História da Arte Moderna",
-            "data": "07/07/2027",
+            "nome": "Introdução à Astrofísica",
+            "data": "18/04/2026",
+            "tema": "ciencia",
+            "palestrante": "Prof. Igor Dantas",
+            "participantes": []
+        },
+        {
+            "nome": "A Arte da Oratória e Apresentações",
+            "data": "02/05/2026",
+            "tema": "desenvolvimento pessoal",
+            "palestrante": "Fernando Abreu",
+            "participantes": []
+        },
+        {
+            "nome": "Economia Comportamental",
+            "data": "11/06/2026",
+            "tema": "economia",
+            "palestrante": "Dra. Vanessa Luz",
+            "participantes": []
+        },
+        {
+            "nome": "Programação para Crianças: Lógica e Jogos",
+            "data": "20/07/2026",
+            "tema": "educacao",
+            "palestrante": "Prof. Alice Pinto",
+            "participantes": []
+        },
+        {
+            "nome": "Introdução à Filmes e Séries",
+            "data": "01/08/2026",
+            "tema": "cultura pop",
+            "palestrante": "Crítico Felipe Nogueira",
+            "participantes": []
+        },
+        {
+            "nome": "Workshop de Escultura em Cerâmica",
+            "data": "10/09/2026",
             "tema": "arte",
-            "participantes": []
-        },
-        {
-            "nome": "Yoga e Bem-Estar",
-            "data": "17/08/2027",
-            "tema": "saude",
-            "participantes": []
-        },
-        {
-            "nome": "programação 1",
-            "data": "02/02/2026",
-            "tema": "programação",
-            "participantes": [
-                "109.210.311-22"
-            ]
-        },
-        {
-            "nome": "programação 2",
-            "data": "02/02/2026",
-            "tema": "programação",
-            "participantes": [
-                "109.210.311-22"
-            ]
-        },
-        {
-            "nome": "programação 3",
-            "data": "02/02/2026",
-            "tema": "programação",
-            "participantes": [
-                "109.210.311-22"
-            ]
-        },
-        {
-            "nome": "programação 4",
-            "data": "20/02/2026",
-            "tema": "programação",
+            "palestrante": "Mestre Artesão Rui Silva",
             "participantes": [
                 "109.210.311-22"
             ]
@@ -182,18 +148,9 @@
             "cpf": "109.210.311-22",
             "nome": "Victor Andrey",
             "email": "barman_victor@gmail.com",
-            "preferencias_tematicas": [
-                "programação"
-            ],
+            "preferencias_tematicas": [],
             "eventos_inscritos": [
-                "Gestão de Projetos Ágeis",
-                "Curso de Python para Iniciantes",
-                "Workshop de Data Science",
-                "Seminário de Marketing Digital",
-                "programação 1",
-                "programação 2",
-                "programação 4",
-                "programação 3"
+                "Workshop de Escultura em Cerâmica"
             ]
         },
         {
@@ -201,9 +158,7 @@
             "nome": "Carlos da Silva",
             "email": "carlinhos.gameplays@gmail.com",
             "preferencias_tematicas": [],
-            "eventos_inscritos": [
-                "programação 1"
-            ]
+            "eventos_inscritos": []
         },
         {
             "cpf": "121.899.049-00",
